@@ -41,7 +41,9 @@ func Transform(text string) string {
 		}
 	}
 	Aan(resultat)
-	return Ponctuation(strings.Join(resultat, " "))
+	texte:= strings.Join(resultat, " ")
+	texte= Ponctuation(texte)
+	return Apo(texte)
 }
 
 func appliquer(liste []string, n int, f func(string) string) {
